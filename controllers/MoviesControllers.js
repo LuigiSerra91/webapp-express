@@ -10,7 +10,6 @@ function index(req, res) {
         })
 
 
-
     })
 }
 

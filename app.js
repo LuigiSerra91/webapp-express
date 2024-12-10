@@ -12,11 +12,12 @@ server.use('/api/movies', MoviesRouter);
 
 
 
-server.use(NotFound)
-server.use(ServerErrorHandler)
 
 server.listen(PORT, () => {
     console.log(`Server is listening on port ${HOST}${PORT}`);
 
 })
 
+
+server.use(NotFound)
+server.use(ServerErrorHandler)
