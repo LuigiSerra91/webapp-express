@@ -4,8 +4,10 @@ const cors = require('cors')
 const MoviesRouter = require('./routers/movies.js')
 const NotFound = require('./middlewares/NotFound.js')
 const ServerErrorHandler = require('./middlewares/ServerErrorHandler.js')
-server.use(express.json())
+// Middleware per il parsing del JSON
+
 server.use(cors());
+server.use(express.json());
 const HOST = process.env.HOST
 const PORT = process.env.PORT
 
