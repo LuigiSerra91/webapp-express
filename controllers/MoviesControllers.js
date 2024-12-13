@@ -40,7 +40,7 @@ function show(req, res) {
 
 }
 
-function reviews(req, res) {
+function review(req, res) {
     const movie_id = Number(req.params.id)
     const { username, review, vote } = req.body
     const now = new Date()
@@ -58,5 +58,5 @@ function reviews(req, res) {
 module.exports = {
     index,
     show,
-    reviews
+    review
 }
