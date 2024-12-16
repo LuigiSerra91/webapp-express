@@ -25,7 +25,7 @@ function show(req, res) {
     const sql = 'SELECT * FROM movies WHERE id = ?';
 
     // Definisce la query per ottenere le recensioni associate al film
-    const reviewsSql = 'SELECT * FROM reviews WHERE movie_id=?'
+    const reviewsSql = 'SELECT * FROM reviews WHERE movie_id=? ORDER BY id DESC'
 
     // Esegui la query per ottenere il film con l'id specificato
     connection.query(sql, [id], (err, results) => {
@@ -71,6 +71,7 @@ function review(req, res) {
         // Se l'inserimento va a buon fine, restituisci un successo con codice 201
         return res.status(201).json({ success: true })
     })
+
 }
 
 // Esporta le funzioni per utilizzarle in altri moduli
